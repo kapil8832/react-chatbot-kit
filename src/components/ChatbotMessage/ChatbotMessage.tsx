@@ -19,7 +19,7 @@ interface IChatbotMessageProps {
   id: number;
   setState?: React.Dispatch<React.SetStateAction<any>>;
   customComponents?: ICustomComponents;
-  customStyles: { backgroundColor: string , color:string};
+  customStyles: { backgroundColor: string ; color:string};
 }
 const ChatbotMessage = ({
   message,
