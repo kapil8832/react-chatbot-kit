@@ -117,7 +117,7 @@ const ChatbotMessage = ({
                   show={<Loader />}
                   elseShow={ <MDEditor.Markdown
                     source={message}
-                    style={{ whiteSpace: "pre-wrap" }}
+                    style={{ whiteSpace: "pre-wrap" , background:'transparent' }}
                   />}
                 />
                 <ConditionallyRender
