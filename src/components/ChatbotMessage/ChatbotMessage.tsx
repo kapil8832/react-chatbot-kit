@@ -3,6 +3,8 @@ import ConditionallyRender from 'react-conditionally-render';
 
 import ChatbotMessageAvatar from './ChatBotMessageAvatar/ChatbotMessageAvatar';
 import Loader from '../Loader/Loader';
+import MDEditor from '@uiw/react-md-editor';
+
 
 import './ChatbotMessage.css';
 import { callIfExists } from '../Chat/chatUtils';
@@ -113,7 +115,10 @@ const ChatbotMessage = ({
                 <ConditionallyRender
                   condition={loading}
                   show={<Loader />}
-                  elseShow={<span>{message}</span>}
+                  elseShow={ <MDEditor.Markdown
+                    source={message}
+                    style={{ whiteSpace: "pre-wrap" }}
+                  />}
                 />
                 <ConditionallyRender
                   condition={withAvatar}
