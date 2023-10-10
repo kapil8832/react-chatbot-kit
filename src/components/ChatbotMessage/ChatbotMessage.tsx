@@ -19,7 +19,7 @@ interface IChatbotMessageProps {
   id: number;
   setState?: React.Dispatch<React.SetStateAction<any>>;
   customComponents?: ICustomComponents;
-  customStyles: { backgroundColor: string ; color:string};
+  customStyles: { backgroundColor: string ; color?:string };
 }
 const ChatbotMessage = ({
   message,
@@ -77,12 +77,12 @@ const ChatbotMessage = ({
     }
   }, [delay]);
 
-  const chatBoxCustomStyles = { backgroundColor: '' , color:''};
+  const chatBoxCustomStyles = { backgroundColor: '' , color:'' };
   const arrowCustomStyles = { borderRightColor: '' };
 
   if (customStyles) {
     chatBoxCustomStyles.backgroundColor = customStyles.backgroundColor;
-    chatBoxCustomStyles.color = customStyles.color ;
+    chatBoxCustomStyles.color = customStyles.color
     arrowCustomStyles.borderRightColor = customStyles.backgroundColor;
   }
 

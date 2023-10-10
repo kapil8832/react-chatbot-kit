@@ -32,6 +32,7 @@ export interface ICustomStyles {
 
 interface IBackgroundColor {
   backgroundColor: string;
+  color?:string;
 }
 
 export default IConfig;
