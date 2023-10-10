@@ -117,7 +117,7 @@ const ChatbotMessage = ({
                   show={<Loader />}
                   elseShow={ <MDEditor.Markdown
                     source={message}
-                    style={chatBoxCustomStyles}
+                    style={customStyles}
                   />}
                 />
                 <ConditionallyRender
